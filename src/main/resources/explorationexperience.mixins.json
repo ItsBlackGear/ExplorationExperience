@@ -1,0 +1,14 @@
+{
+  	"required": true,
+  	"package": "com.blackgear.explorationexperience.core.mixin",
+  	"compatibilityLevel": "JAVA_8",
+  	"minVersion": "0.8",
+  	"refmap": "explorationexperience.refmap.json",
+  	"mixins": [
+  	],
+  	"client": [
+  	],
+  	"injectors": {
+    	"defaultRequire": 1
+  	}
+}
