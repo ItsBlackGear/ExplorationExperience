@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/cube_all",
+	"textures": {
+		"all": "explorationexperience:block/light_blue_fungal_planks"
+	}
+}

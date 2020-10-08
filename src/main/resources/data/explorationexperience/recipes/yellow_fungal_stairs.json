@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "wooden_slab",
+	"pattern": [
+		"#  ",
+		"## ",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "explorationexperience:yellow_fungal_planks"
+		}
+	},
+	"result": {
+		"item": "explorationexperience:yellow_fungal_stairs",
+		"count": 4
+	}
+}

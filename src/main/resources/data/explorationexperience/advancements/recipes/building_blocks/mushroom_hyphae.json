@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"explorationexperience:mushroom_hyphae"
+		]
+	},
+	"criteria": {
+		"has_mushroom_stem": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "explorationexperience:mushroom_stem"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "explorationexperience:mushroom_hyphae"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_mushroom_stem",
+			"has_the_recipe"
+		]
+	]
+}

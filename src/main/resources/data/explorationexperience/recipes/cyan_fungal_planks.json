@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "planks",
+	"pattern": [
+		"###",
+		"#X#",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "explorationexperience:fungal_planks"
+		},
+		"X": {
+			"item": "minecraft:cyan_dye"
+		}
+	},
+	"result": {
+		"item": "explorationexperience:cyan_fungal_planks",
+		"count": 8
+	}
+}

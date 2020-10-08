@@ -1,0 +1,8 @@
+{
+	"parent": "minecraft:block/slab",
+	"textures": {
+		"bottom": "explorationexperience:block/yellow_fungal_planks",
+		"top": "explorationexperience:block/yellow_fungal_planks",
+		"side": "explorationexperience:block/yellow_fungal_planks"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		"explorationexperience:mushroom_stem",
+		"explorationexperience:stripped_mushroom_stem",
+		"explorationexperience:mushroom_hyphae",
+		"explorationexperience:stripped_mushroom_hyphae"
+	]
+}

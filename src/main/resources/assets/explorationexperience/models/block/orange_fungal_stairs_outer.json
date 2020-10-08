@@ -1,0 +1,8 @@
+{
+	"parent": "minecraft:block/outer_stairs",
+	"textures": {
+		"bottom": "explorationexperience:block/orange_fungal_planks",
+		"top": "explorationexperience:block/orange_fungal_planks",
+		"side": "explorationexperience:block/orange_fungal_planks"
+	}
+}

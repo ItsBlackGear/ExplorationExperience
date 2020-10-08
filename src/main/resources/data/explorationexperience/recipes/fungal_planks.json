@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "planks",
+	"ingredients": [
+		{
+			"tag": "explorationexperience:mushroom_stems"
+		}
+	],
+	"result": {
+		"item": "explorationexperience:fungal_planks",
+		"count": 4
+	}
+}

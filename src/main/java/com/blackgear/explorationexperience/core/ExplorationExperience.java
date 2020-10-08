@@ -5,16 +5,20 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.blackgear.explorationexperience.common.biome.VanillaBiomeFeatures;
+import com.blackgear.explorationexperience.core.registries.common.BlockOverrides;
 import com.teamabnormals.abnormals_core.core.utils.RegistryHelper;
 
 //<>
@@ -34,6 +38,8 @@ public class ExplorationExperience {
 		REGISTRY_HELPER.getDeferredBlockRegister().register(modEventBus);
 		REGISTRY_HELPER.getDeferredItemRegister().register(modEventBus);
 				
+		BlockOverrides.registerOverrides(modEventBus);
+		
 		MinecraftForge.EVENT_BUS.register(this);
 		
 		DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> {
@@ -50,5 +56,10 @@ public class ExplorationExperience {
 	void setupCommon(final FMLCommonSetupEvent event) {
 		DeferredWorkQueue.runLater(() -> {
 		});
+	}
+	
+	@SubscribeEvent
+	public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
+		VanillaBiomeFeatures.overrideVanillaFeatures();
 	}
 }

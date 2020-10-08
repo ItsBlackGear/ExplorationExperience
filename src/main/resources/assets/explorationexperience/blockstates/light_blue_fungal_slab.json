@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "explorationexperience:block/light_blue_fungal_slab"
+		},
+		"type=double": {
+			"model": "explorationexperience:block/light_blue_fungal_planks"
+		},
+		"type=top": {
+			"model": "explorationexperience:light_blue_fungal_slab_top"
+		}
+	}
+}

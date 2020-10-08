@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"axis=x": {
+			"model": "explorationexperience:block/stripped_mushroom_hyphae",
+			"x": 90,
+			"y": 90
+		},
+		"axis=y": {
+			"model": "explorationexperience:block/stripped_mushroom_hyphae"
+		},
+		"axis=z": {
+			"model": "explorationexperience:block/stripped_mushroom_hyphae",
+			"x": 90
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"replace": false,
+	"values": [
+    	"minecraft:oak_planks",
+    	"minecraft:spruce_planks",
+    	"minecraft:birch_planks",
+    	"minecraft:jungle_planks",
+    	"minecraft:acacia_planks",
+    	"minecraft:dark_oak_planks",
+    	"explorationexperience:fungal_planks",
+    	"explorationexperience:red_fungal_planks",
+    	"explorationexperience:orange_fungal_planks",
+    	"explorationexperience:yellow_fungal_planks",
+    	"explorationexperience:lime_fungal_planks",
+    	"explorationexperience:green_fungal_planks",
+    	"explorationexperience:light_blue_fungal_planks",
+    	"explorationexperience:cyan_fungal_planks",
+    	"explorationexperience:blue_fungal_planks",
+    	"explorationexperience:purple_fungal_planks",
+    	"explorationexperience:magenta_fungal_planks",
+    	"explorationexperience:pink_fungal_planks",
+    	"explorationexperience:white_fungal_planks",
+    	"explorationexperience:light_gray_fungal_planks",
+    	"explorationexperience:gray_fungal_planks",
+    	"explorationexperience:black_fungal_planks",
+    	"explorationexperience:brown_fungal_planks"  	
+  	]
+}

@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"explorationexperience:pink_fungal_planks"
+		]
+	},
+	"criteria": {
+		"has_fungal_planks": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "explorationexperience:fungal_planks"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "explorationexperience:pink_fungal_planks"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_fungal_planks",
+			"has_the_recipe"
+		]
+	]
+}

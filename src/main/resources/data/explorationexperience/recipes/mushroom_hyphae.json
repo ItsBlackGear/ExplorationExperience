@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "bark",
+	"pattern": [
+		"##",
+		"##"
+	],
+	"key": {
+		"#": {
+			"item": "explorationexperience:mushroom_stem"
+		}
+	},
+	"result": {
+		"item": "explorationexperience:mushroom_hyphae",
+		"count": 3
+	}
+}

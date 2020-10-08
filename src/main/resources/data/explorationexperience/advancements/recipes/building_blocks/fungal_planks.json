@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"explorationexperience:fungal_planks"
+		]
+	},
+	"criteria": {
+		"has_mushroom_stem": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "explorationexperience:mushroom_stems"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "explorationexperience:fungal_planks"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_mushroom_stem",
+			"has_the_recipe"
+		]
+	]
+}

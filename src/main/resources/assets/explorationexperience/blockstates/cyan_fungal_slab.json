@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "explorationexperience:block/cyan_fungal_slab"
+		},
+		"type=double": {
+			"model": "explorationexperience:block/cyan_fungal_planks"
+		},
+		"type=top": {
+			"model": "explorationexperience:cyan_fungal_slab_top"
+		}
+	}
+}

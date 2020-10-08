@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"explorationexperience:black_fungal_slab"
+		]
+	},
+	"criteria": {
+		"has_planks": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "explorationexperience:black_fungal_planks"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "explorationexperience:black_fungal_slab"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_planks",
+			"has_the_recipe"
+		]
+	]
+}
