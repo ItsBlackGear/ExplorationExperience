@@ -7,7 +7,7 @@
 			"model": "explorationexperience:block/magenta_fungal_planks"
 		},
 		"type=top": {
-			"model": "explorationexperience:magenta_fungal_slab_top"
+			"model": "explorationexperience:block/magenta_fungal_slab_top"
 		}
 	}
 }

@@ -11,8 +11,6 @@ import com.mojang.authlib.minecraft.MinecraftProfileTexture;
 import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -31,7 +29,6 @@ public class DevCapeHandler {
 	private static final Set<String> RENDER = Sets.newHashSet();
 	
 	@SubscribeEvent
-	@OnlyIn(Dist.CLIENT)
 	public static void playerRender(RenderPlayerEvent.Post event) {
 		PlayerEntity player = event.getPlayer();
 		String uuid = PlayerEntity.getUUID(player.getGameProfile()).toString();
