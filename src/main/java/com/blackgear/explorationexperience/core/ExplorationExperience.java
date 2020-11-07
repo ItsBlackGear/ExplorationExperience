@@ -17,7 +17,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.blackgear.explorationexperience.common.biome.VanillaBiomeFeatures;
+import com.blackgear.explorationexperience.common.world.VanillaBiomeFeatures;
 import com.blackgear.explorationexperience.core.registries.common.BlockOverrides;
 import com.teamabnormals.abnormals_core.core.utils.RegistryHelper;
 

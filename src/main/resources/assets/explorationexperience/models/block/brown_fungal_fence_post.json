@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/fence_post",
+	"textures": {
+		"texture" : "explorationexperience:block/brown_fungal_planks"
+	}
+}

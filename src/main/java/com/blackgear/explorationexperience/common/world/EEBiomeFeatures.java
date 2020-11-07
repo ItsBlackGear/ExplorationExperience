@@ -1,4 +1,4 @@
-package com.blackgear.explorationexperience.common.biome;
+package com.blackgear.explorationexperience.common.world;
 
 import java.util.ArrayList;
 import java.util.List;

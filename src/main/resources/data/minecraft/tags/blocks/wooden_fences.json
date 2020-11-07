@@ -1,0 +1,28 @@
+{
+  	"replace": false,
+  	"values": [
+    	"minecraft:oak_fence",
+    	"minecraft:acacia_fence",
+    	"minecraft:dark_oak_fence",
+    	"minecraft:spruce_fence",
+    	"minecraft:birch_fence",
+    	"minecraft:jungle_fence",
+		"explorationexperience:fungal_fence",  	
+		"explorationexperience:red_fungal_fence",  	
+		"explorationexperience:orange_fungal_fence",  	
+		"explorationexperience:yellow_fungal_fence",  	
+		"explorationexperience:lime_fungal_fence",  	
+		"explorationexperience:green_fungal_fence",  	
+		"explorationexperience:cyan_fungal_fence",  	
+		"explorationexperience:light_blue_fungal_fence",  	
+		"explorationexperience:blue_fungal_fence",  	
+		"explorationexperience:purple_fungal_fence",  	
+		"explorationexperience:magenta_fungal_fence",  	
+		"explorationexperience:pink_fungal_fence",  	
+		"explorationexperience:white_fungal_fence",  	
+		"explorationexperience:light_gray_fungal_fence",  	
+		"explorationexperience:gray_fungal_fence",  	
+		"explorationexperience:black_fungal_fence",  	
+		"explorationexperience:brown_fungal_fence"  	
+	]
+}

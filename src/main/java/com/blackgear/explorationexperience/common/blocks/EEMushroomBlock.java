@@ -2,7 +2,7 @@ package com.blackgear.explorationexperience.common.blocks;
 
 import java.util.Random;
 
-import com.blackgear.explorationexperience.common.biome.EEBiomeFeatures;
+import com.blackgear.explorationexperience.common.world.EEBiomeFeatures;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

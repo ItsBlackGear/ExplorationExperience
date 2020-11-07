@@ -1,4 +1,4 @@
-package com.blackgear.explorationexperience.common.biome;
+package com.blackgear.explorationexperience.common.world;
 
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
