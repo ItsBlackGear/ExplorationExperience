@@ -1,6 +1,6 @@
 package com.blackgear.explorationexperience.core.registries.common;
 
-import com.blackgear.explorationexperience.common.blocks.EEMushroomBlock;
+import com.blackgear.explorationexperience.common.block.EEMushroomBlock;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;

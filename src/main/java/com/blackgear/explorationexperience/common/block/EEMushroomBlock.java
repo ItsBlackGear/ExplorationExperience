@@ -1,4 +1,4 @@
-package com.blackgear.explorationexperience.common.blocks;
+package com.blackgear.explorationexperience.common.block;
 
 import java.util.Random;
 

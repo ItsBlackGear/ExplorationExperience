@@ -1,5 +1,7 @@
 package com.blackgear.explorationexperience.core.registries.common;
 
+import com.blackgear.explorationexperience.common.block.TwilightVinesBlock;
+import com.blackgear.explorationexperience.common.block.TwilightVinesTopBlock;
 import com.blackgear.explorationexperience.core.ExplorationExperience;
 import com.teamabnormals.abnormals_core.common.blocks.wood.AbnormalsLogBlock;
 import com.teamabnormals.abnormals_core.common.blocks.wood.PlanksBlock;
@@ -10,11 +12,7 @@ import com.teamabnormals.abnormals_core.common.blocks.wood.WoodSlabBlock;
 import com.teamabnormals.abnormals_core.common.blocks.wood.WoodStairsBlock;
 import com.teamabnormals.abnormals_core.core.utils.RegistryHelper;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.FenceBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.TrapDoorBlock;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.ItemGroup;
@@ -29,10 +27,18 @@ public class EEBlocks {
 	
 	//BUILDING BLOCKS
 	
-	public static final RegistryObject<Block> MUSHROOM_STEM 						= HELPER.createBlock("mushroom_stem", () -> new AbnormalsLogBlock(() -> EEBlocks.STRIPPED_MUSHROOM_STEM.get(), AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOL).hardnessAndResistance(2.0f).sound(SoundType.WOOD)), ItemGroup.BUILDING_BLOCKS);
-	public static final RegistryObject<Block> STRIPPED_MUSHROOM_STEM 	= HELPER.createBlock("stripped_mushroom_stem", () -> new StrippedLogBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOL).hardnessAndResistance(2.0f).sound(SoundType.WOOD)) ,ItemGroup.BUILDING_BLOCKS);
-	public static final RegistryObject<Block> MUSHROOM_HYPHAE 				= HELPER.createBlock("mushroom_hyphae", () -> new WoodBlock(() -> EEBlocks.STRIPPED_MUSHROOM_HYPHAE.get(), AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOL).hardnessAndResistance(2.0f).sound(SoundType.WOOD)), ItemGroup.BUILDING_BLOCKS);
-	public static final RegistryObject<Block> STRIPPED_MUSHROOM_HYPHAE 		= HELPER.createBlock("stripped_mushroom_hyphae", () -> new StrippedWoodBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOL).hardnessAndResistance(2.0f).sound(SoundType.WOOD)) ,ItemGroup.BUILDING_BLOCKS);	
+	public static final RegistryObject<Block> MUSHROOM_STEM 				= HELPER.createBlock("mushroom_stem", () -> new AbnormalsLogBlock(EEBlocks.STRIPPED_MUSHROOM_STEM, AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOL).hardnessAndResistance(2.0f).sound(SoundType.WOOD)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> STRIPPED_MUSHROOM_STEM 		= HELPER.createBlock("stripped_mushroom_stem", () -> new StrippedLogBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOL).hardnessAndResistance(2.0f).sound(SoundType.WOOD)) ,ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> MUSHROOM_HYPHAE 				= HELPER.createBlock("mushroom_hyphae", () -> new WoodBlock(EEBlocks.STRIPPED_MUSHROOM_HYPHAE, AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOL).hardnessAndResistance(2.0f).sound(SoundType.WOOD)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> STRIPPED_MUSHROOM_HYPHAE 		= HELPER.createBlock("stripped_mushroom_hyphae", () -> new StrippedWoodBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOL).hardnessAndResistance(2.0f).sound(SoundType.WOOD)) ,ItemGroup.BUILDING_BLOCKS);
+
+	public static final RegistryObject<Block> TWILIGHT_STEM 				= HELPER.createBlock("twilight_stem", () -> new AbnormalsLogBlock(EEBlocks.STRIPPED_TWILIGHT_STEM, AbstractBlock.Properties.create(Material.NETHER_WOOD, MaterialColor.BLUE_TERRACOTTA).hardnessAndResistance(2.0f).sound(SoundType.HYPHAE)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> STRIPPED_TWILIGHT_STEM 		= HELPER.createBlock("stripped_twilight_stem", () -> new StrippedLogBlock(AbstractBlock.Properties.create(Material.NETHER_WOOD, MaterialColor.BLUE_TERRACOTTA).hardnessAndResistance(2.0f).sound(SoundType.HYPHAE)) ,ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> TWILIGHT_HYPHAE 				= HELPER.createBlock("twilight_hyphae", () -> new WoodBlock(EEBlocks.STRIPPED_TWILIGHT_HYPHAE, AbstractBlock.Properties.create(Material.NETHER_WOOD, MaterialColor.BLUE_TERRACOTTA).hardnessAndResistance(2.0f).sound(SoundType.HYPHAE)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> STRIPPED_TWILIGHT_HYPHAE 		= HELPER.createBlock("stripped_twilight_hyphae", () -> new StrippedWoodBlock(AbstractBlock.Properties.create(Material.NETHER_WOOD, MaterialColor.BLUE_TERRACOTTA).hardnessAndResistance(2.0f).sound(SoundType.HYPHAE)) ,ItemGroup.BUILDING_BLOCKS);
+
+	public static final RegistryObject<Block> TWILIGHT_NYLIUM 				= HELPER.createBlock("twilight_nylium", () -> new NyliumBlock(AbstractBlock.Properties.from(Blocks.CRIMSON_NYLIUM)), ItemGroup.BUILDING_BLOCKS);
+	public static final RegistryObject<Block> TWILIGHT_WART_BLOCK 			= HELPER.createBlock("twilight_wart_block", () -> new Block(AbstractBlock.Properties.from(Blocks.NETHER_WART_BLOCK)), ItemGroup.BUILDING_BLOCKS);
 	
 	public static final RegistryObject<Block> FUNGAL_PLANKS 				= HELPER.createBlock("fungal_planks", () -> new PlanksBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOL).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.BUILDING_BLOCKS);
 	public static final RegistryObject<Block> WHITE_FUNGAL_PLANKS 			= HELPER.createBlock("white_fungal_planks", () -> new PlanksBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.SNOW).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.BUILDING_BLOCKS);
@@ -90,6 +96,9 @@ public class EEBlocks {
 	
 	// DECORATION BLOCKS
 	
+	public static final RegistryObject<Block> TWILIGHT_VINES				= HELPER.createBlock("twilight_vines", () -> new TwilightVinesTopBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BLACK_TERRACOTTA).tickRandomly().doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.NETHER_VINE)), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> TWILIGHT_VINES_PLANT			= HELPER.createBlockNoItem("twilight_vines_plant", () -> new TwilightVinesBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.BLACK_TERRACOTTA).doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.NETHER_VINE)));
+
 	public static final RegistryObject<Block> FUNGAL_FENCE 					= HELPER.createBlock("fungal_fence", () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOL).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.DECORATIONS);
 	public static final RegistryObject<Block> WHITE_FUNGAL_FENCE			= HELPER.createBlock("white_fungal_fence", () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.SNOW).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.DECORATIONS);
 	public static final RegistryObject<Block> ORANGE_FUNGAL_FENCE 			= HELPER.createBlock("orange_fungal_fence", () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.ADOBE).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.DECORATIONS);
@@ -102,29 +111,29 @@ public class EEBlocks {
 	public static final RegistryObject<Block> LIGHT_GRAY_FUNGAL_FENCE 		= HELPER.createBlock("light_gray_fungal_fence", () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.LIGHT_GRAY).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.DECORATIONS);
 	public static final RegistryObject<Block> CYAN_FUNGAL_FENCE 			= HELPER.createBlock("cyan_fungal_fence", () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.CYAN).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.DECORATIONS);
 	public static final RegistryObject<Block> PURPLE_FUNGAL_FENCE 			= HELPER.createBlock("purple_fungal_fence", () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.PURPLE).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> BLUE_FUNGAL_FENCE 							= HELPER.createBlock("blue_fungal_fence", () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BLUE).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> BROWN_FUNGAL_FENCE 						= HELPER.createBlock("brown_fungal_fence", () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> GREEN_FUNGAL_FENCE 							= HELPER.createBlock("green_fungal_fence", () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.GREEN).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> RED_FUNGAL_FENCE 								= HELPER.createBlock("red_fungal_fence", () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.RED).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.DECORATIONS);
-	public static final RegistryObject<Block> BLACK_FUNGAL_FENCE 							= HELPER.createBlock("black_fungal_fence", () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BLACK).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> BLUE_FUNGAL_FENCE 			= HELPER.createBlock("blue_fungal_fence", () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BLUE).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> BROWN_FUNGAL_FENCE 			= HELPER.createBlock("brown_fungal_fence", () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> GREEN_FUNGAL_FENCE 			= HELPER.createBlock("green_fungal_fence", () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.GREEN).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> RED_FUNGAL_FENCE 				= HELPER.createBlock("red_fungal_fence", () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.RED).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.DECORATIONS);
+	public static final RegistryObject<Block> BLACK_FUNGAL_FENCE 			= HELPER.createBlock("black_fungal_fence", () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BLACK).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.DECORATIONS);
 	
 	// REDSTONE BLOCKS
 	
-	public static final RegistryObject<Block> FUNGAL_TRAPDOOR 								= HELPER.createBlock("fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOL).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> WHITE_FUNGAL_TRAPDOOR					= HELPER.createBlock("white_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.SNOW).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> ORANGE_FUNGAL_TRAPDOOR 			= HELPER.createBlock("orange_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.ADOBE).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> MAGENTA_FUNGAL_TRAPDOOR 			= HELPER.createBlock("magenta_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.MAGENTA).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> LIGHT_BLUE_FUNGAL_TRAPDOOR 		= HELPER.createBlock("light_blue_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.LIGHT_BLUE).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> YELLOW_FUNGAL_TRAPDOOR 				= HELPER.createBlock("yellow_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.YELLOW).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> LIME_FUNGAL_TRAPDOOR 					= HELPER.createBlock("lime_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.LIME).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> PINK_FUNGAL_TRAPDOOR 					= HELPER.createBlock("pink_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.PINK).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> GRAY_FUNGAL_TRAPDOOR 					= HELPER.createBlock("gray_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.GRAY).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> LIGHT_GRAY_FUNGAL_TRAPDOOR 		= HELPER.createBlock("light_gray_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.LIGHT_GRAY).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> CYAN_FUNGAL_TRAPDOOR 					= HELPER.createBlock("cyan_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.CYAN).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> PURPLE_FUNGAL_TRAPDOOR 				= HELPER.createBlock("purple_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.PURPLE).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> BLUE_FUNGAL_TRAPDOOR 					= HELPER.createBlock("blue_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BLUE).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> BROWN_FUNGAL_TRAPDOOR 				= HELPER.createBlock("brown_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> GREEN_FUNGAL_TRAPDOOR 				= HELPER.createBlock("green_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.GREEN).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> RED_FUNGAL_TRAPDOOR 						= HELPER.createBlock("red_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.RED).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
-	public static final RegistryObject<Block> BLACK_FUNGAL_TRAPDOOR 				= HELPER.createBlock("black_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BLACK).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> FUNGAL_TRAPDOOR 				= HELPER.createBlock("fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOL).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> WHITE_FUNGAL_TRAPDOOR			= HELPER.createBlock("white_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.SNOW).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> ORANGE_FUNGAL_TRAPDOOR 		= HELPER.createBlock("orange_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.ADOBE).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> MAGENTA_FUNGAL_TRAPDOOR 		= HELPER.createBlock("magenta_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.MAGENTA).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> LIGHT_BLUE_FUNGAL_TRAPDOOR 	= HELPER.createBlock("light_blue_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.LIGHT_BLUE).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> YELLOW_FUNGAL_TRAPDOOR 		= HELPER.createBlock("yellow_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.YELLOW).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> LIME_FUNGAL_TRAPDOOR 			= HELPER.createBlock("lime_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.LIME).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> PINK_FUNGAL_TRAPDOOR 			= HELPER.createBlock("pink_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.PINK).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> GRAY_FUNGAL_TRAPDOOR 			= HELPER.createBlock("gray_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.GRAY).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> LIGHT_GRAY_FUNGAL_TRAPDOOR 	= HELPER.createBlock("light_gray_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.LIGHT_GRAY).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> CYAN_FUNGAL_TRAPDOOR 			= HELPER.createBlock("cyan_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.CYAN).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> PURPLE_FUNGAL_TRAPDOOR 		= HELPER.createBlock("purple_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.PURPLE).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> BLUE_FUNGAL_TRAPDOOR 			= HELPER.createBlock("blue_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BLUE).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> BROWN_FUNGAL_TRAPDOOR 		= HELPER.createBlock("brown_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> GREEN_FUNGAL_TRAPDOOR 		= HELPER.createBlock("green_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.GREEN).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> RED_FUNGAL_TRAPDOOR 			= HELPER.createBlock("red_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.RED).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
+	public static final RegistryObject<Block> BLACK_FUNGAL_TRAPDOOR 		= HELPER.createBlock("black_fungal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BLACK).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)), ItemGroup.REDSTONE);
 }

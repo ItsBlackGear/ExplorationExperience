@@ -17,13 +17,15 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.blackgear.explorationexperience.client.renderer.BlockRenderType;
 import com.blackgear.explorationexperience.common.world.VanillaBiomeFeatures;
 import com.blackgear.explorationexperience.core.registries.common.BlockOverrides;
 import com.teamabnormals.abnormals_core.core.utils.RegistryHelper;
 
+@SuppressWarnings("deprecation")
+
 //<>
 
-@SuppressWarnings("deprecation")
 @Mod(value = ExplorationExperience.MOD_ID)
 @Mod.EventBusSubscriber(modid = ExplorationExperience.MOD_ID, bus = Bus.MOD)
 public class ExplorationExperience {
@@ -50,7 +52,7 @@ public class ExplorationExperience {
 
 	@OnlyIn(Dist.CLIENT)
 	void setupClient(final FMLClientSetupEvent event) {
-
+		BlockRenderType.setRenderLayers();
 	}
 
 	void setupCommon(final FMLCommonSetupEvent event) {
